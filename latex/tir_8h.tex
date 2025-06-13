@@ -1,0 +1,127 @@
+\doxysection{tir.\+h File Reference}
+\hypertarget{tir_8h}{}\label{tir_8h}\index{tir.h@{tir.h}}
+
+
+Gestion du jeu de Tir.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplayertir__t}{playertir\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un joueur. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbullet__t}{bullet\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un projectile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tir_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{tir_8h_a2cd109632a6dcccaa80b43561b1ab700} 
+\#define {\bfseries SCREEN\+\_\+\+WIDTH}~320
+\begin{DoxyCompactList}\small\item\em Largeur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{tir_8h_a6974d08a74da681b3957b2fead2608b8}\label{tir_8h_a6974d08a74da681b3957b2fead2608b8} 
+\#define {\bfseries SCREEN\+\_\+\+HEIGHT}~240
+\begin{DoxyCompactList}\small\item\em Hauteur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{tir_8h_a58b7f9d237ced4c309d7500fd167082b}\label{tir_8h_a58b7f9d237ced4c309d7500fd167082b} 
+\#define {\bfseries PLAYER\+\_\+\+WIDTH\+\_\+\+TIR}~15
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}un joueur en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{tir_8h_a6d693bce6a4b86bf74e9f4ba46f3dd26}\label{tir_8h_a6d693bce6a4b86bf74e9f4ba46f3dd26} 
+\#define {\bfseries PLAYER\+\_\+\+HEIGHT\+\_\+\+TIR}~25
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}un joueur en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{tir_8h_a70b3e643b533b8f785b7912e69434161}\label{tir_8h_a70b3e643b533b8f785b7912e69434161} 
+\#define {\bfseries BULLET\+\_\+\+SPEED}~8
+\begin{DoxyCompactList}\small\item\em Vitesse des projectiles. \end{DoxyCompactList}\item 
+\Hypertarget{tir_8h_af49bad41acef45feb40939c0cf9d5d35}\label{tir_8h_af49bad41acef45feb40939c0cf9d5d35} 
+\#define {\bfseries PLAYER\+\_\+\+SPEED}~5
+\begin{DoxyCompactList}\small\item\em Vitesse de déplacement des joueurs. \end{DoxyCompactList}\item 
+\Hypertarget{tir_8h_a4331843c2698da5ccb18562eb1485681}\label{tir_8h_a4331843c2698da5ccb18562eb1485681} 
+\#define {\bfseries MAX\+\_\+\+BULLETS}~5
+\begin{DoxyCompactList}\small\item\em Nombre maximum de projectiles par joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86b}{gametir\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86bacfd68378455a8873a684c4cf48cf81bf}{TIR\+\_\+\+GAME\+\_\+\+WAIT\+\_\+\+START}}
+, \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86bab589b570b03def5b8ce0aecc348b936d}{TIR\+\_\+\+GAME\+\_\+\+RUNNING}}
+, \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86ba69ec5a3b833fd0672583dfda4aba6489}{TIR\+\_\+\+GAME\+\_\+\+OVER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Énumération des états possibles du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tir_8h_ac006e6762b934b3410cf50f7de539bde}\label{tir_8h_ac006e6762b934b3410cf50f7de539bde} 
+void {\bfseries TIR\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise le jeu de Tir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tir_8h_af77387100a4a98a330a9326dc8a6b1c3}{TIR\+\_\+process\+\_\+main}} (void)
+\begin{DoxyCompactList}\small\item\em Fonction principale de traitement du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tir_8h_ab8f6acab9fac47381d8a0f2baafd76d9}{TIR\+\_\+shoot}} (\mbox{\hyperlink{structplayertir__t}{playertir\+\_\+t}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Fait tirer un joueur. \end{DoxyCompactList}\item 
+\Hypertarget{tir_8h_a892df9a36a9d0e7240a99fee2cd6515e}\label{tir_8h_a892df9a36a9d0e7240a99fee2cd6515e} 
+void {\bfseries TIR\+\_\+check\+\_\+collisions} (void)
+\begin{DoxyCompactList}\small\item\em Vérifie les collisions entre les projectiles et les joueurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion du jeu de Tir. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les définitions et structures nécessaires pour le jeu de Tir, incluant les dimensions du terrain, les joueurs, les projectiles et les états du jeu. 
+
+\label{doc-enum-members}
+\Hypertarget{tir_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{tir_8h_af161e86a1d12e253a507cd92746ee86b}\index{tir.h@{tir.h}!gametir\_state\_t@{gametir\_state\_t}}
+\index{gametir\_state\_t@{gametir\_state\_t}!tir.h@{tir.h}}
+\doxysubsubsection{\texorpdfstring{gametir\_state\_t}{gametir\_state\_t}}
+{\footnotesize\ttfamily \label{tir_8h_af161e86a1d12e253a507cd92746ee86b} 
+enum \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86b}{gametir\+\_\+state\+\_\+t}}}
+
+
+
+Énumération des états possibles du jeu. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIR\_GAME\_WAIT\_START@{TIR\_GAME\_WAIT\_START}!tir.h@{tir.h}}\index{tir.h@{tir.h}!TIR\_GAME\_WAIT\_START@{TIR\_GAME\_WAIT\_START}}}\Hypertarget{tir_8h_af161e86a1d12e253a507cd92746ee86bacfd68378455a8873a684c4cf48cf81bf}\label{tir_8h_af161e86a1d12e253a507cd92746ee86bacfd68378455a8873a684c4cf48cf81bf} 
+TIR\+\_\+\+GAME\+\_\+\+WAIT\+\_\+\+START&En attente du début de la partie \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIR\_GAME\_RUNNING@{TIR\_GAME\_RUNNING}!tir.h@{tir.h}}\index{tir.h@{tir.h}!TIR\_GAME\_RUNNING@{TIR\_GAME\_RUNNING}}}\Hypertarget{tir_8h_af161e86a1d12e253a507cd92746ee86bab589b570b03def5b8ce0aecc348b936d}\label{tir_8h_af161e86a1d12e253a507cd92746ee86bab589b570b03def5b8ce0aecc348b936d} 
+TIR\+\_\+\+GAME\+\_\+\+RUNNING&Partie en cours \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIR\_GAME\_OVER@{TIR\_GAME\_OVER}!tir.h@{tir.h}}\index{tir.h@{tir.h}!TIR\_GAME\_OVER@{TIR\_GAME\_OVER}}}\Hypertarget{tir_8h_af161e86a1d12e253a507cd92746ee86ba69ec5a3b833fd0672583dfda4aba6489}\label{tir_8h_af161e86a1d12e253a507cd92746ee86ba69ec5a3b833fd0672583dfda4aba6489} 
+TIR\+\_\+\+GAME\+\_\+\+OVER&Partie terminée \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{tir_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{tir_8h_af77387100a4a98a330a9326dc8a6b1c3}\index{tir.h@{tir.h}!TIR\_process\_main@{TIR\_process\_main}}
+\index{TIR\_process\_main@{TIR\_process\_main}!tir.h@{tir.h}}
+\doxysubsubsection{\texorpdfstring{TIR\_process\_main()}{TIR\_process\_main()}}
+{\footnotesize\ttfamily \label{tir_8h_af77387100a4a98a330a9326dc8a6b1c3} 
+void TIR\+\_\+process\+\_\+main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Fonction principale de traitement du jeu. 
+
+Cette fonction gère la logique du jeu, les déplacements et les collisions \Hypertarget{tir_8h_ab8f6acab9fac47381d8a0f2baafd76d9}\index{tir.h@{tir.h}!TIR\_shoot@{TIR\_shoot}}
+\index{TIR\_shoot@{TIR\_shoot}!tir.h@{tir.h}}
+\doxysubsubsection{\texorpdfstring{TIR\_shoot()}{TIR\_shoot()}}
+{\footnotesize\ttfamily \label{tir_8h_ab8f6acab9fac47381d8a0f2baafd76d9} 
+void TIR\+\_\+shoot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayertir__t}{playertir\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Fait tirer un joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointeur vers la structure du joueur qui tire \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,91 @@
+\doxysection{breakbricks.\+h}
+\hypertarget{breakbricks_8h_source}{}\label{breakbricks_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ breakbricks.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{*}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ BREAKBRICKS\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ BREAKBRICKS\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_utils.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stm32g4xx\_hal.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ NB\_BRICKS\_LATERAL\ \ \ 6}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ NB\_BRICKS\_VERTICAL\ \ 4}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ NB\_MAX\_BRICKS\ (NB\_BRICKS\_VERTICAL*NB\_BRICKS\_LATERAL)}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ SCREEN\_WIDTH\ \ \ \ 320}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SCREEN\_HEIGHT\ \ \ 240}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ MARGIN\_DEFAULT\ 2}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ BRICK\_WIDTH\_DEFAULT\ ((SCREEN\_WIDTH-\/(NB\_BRICKS\_LATERAL+1)*MARGIN\_DEFAULT)/NB\_BRICKS\_LATERAL)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ BRICK\_HEIGHT\_DEFAULT\ (32)}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ BREAK\_BALL\_OPTION\_NONE\ ,}
+\DoxyCodeLine{00027\ \ \ \ \ BREAK\_BALL\_OPTION\_JOKER\ ,}
+\DoxyCodeLine{00028\ \ \ \ \ BREAK\_BALL\_OPTION\_GLUE\ ,}
+\DoxyCodeLine{00029\ \ \ \ \ BREAK\_BALL\_OPTION\_NB,}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \}ballbreak\_options\_e;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ int16\_t\ x;}
+\DoxyCodeLine{00035\ \ \ \ \ int16\_t\ y;}
+\DoxyCodeLine{00036\ \ \ \ \ int16\_t\ fine\_x;}
+\DoxyCodeLine{00037\ \ \ \ \ int16\_t\ fine\_y;}
+\DoxyCodeLine{00038\ \ \ \ \ int16\_t\ speed\_x;}
+\DoxyCodeLine{00039\ \ \ \ \ int16\_t\ speed\_y;}
+\DoxyCodeLine{00040\ \ \ \ \ int16\_t\ size;}
+\DoxyCodeLine{00041\ \ \ \ \ ballbreak\_options\_e\ options;}
+\DoxyCodeLine{00042\ \ \ \ \ int8\_t\ joker;}
+\DoxyCodeLine{00043\ \}\mbox{\hyperlink{structballbreak__t}{ballbreak\_t}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00046\ \ \ \ \ int16\_t\ x;}
+\DoxyCodeLine{00047\ \ \ \ \ int16\_t\ y;}
+\DoxyCodeLine{00048\ \ \ \ \ int16\_t\ left;}
+\DoxyCodeLine{00049\ \ \ \ \ int16\_t\ right;}
+\DoxyCodeLine{00050\ \ \ \ \ int16\_t\ width;}
+\DoxyCodeLine{00051\ \ \ \ \ int16\_t\ height;}
+\DoxyCodeLine{00052\ \ \ \ \ int16\_t\ speed;}
+\DoxyCodeLine{00053\ \}\mbox{\hyperlink{structracketbreak__t}{racketbreak\_t}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ BRICKSTYLE\_NONE,}
+\DoxyCodeLine{00057\ \ \ \ \ BRICKSTYLE\_FULL,}
+\DoxyCodeLine{00058\ \ \ \ \ BRICKSTYLE\_ROCK,}
+\DoxyCodeLine{00059\ \ \ \ \ BRICKSTYLE\_BOMB,}
+\DoxyCodeLine{00060\ \ \ \ \ BRICKSTYLE\_RESIZER,}
+\DoxyCodeLine{00061\ \ \ \ \ BRICKSTYLE\_JOKER,}
+\DoxyCodeLine{00062\ \ \ \ \ BRICKSTYLE\_GLUE,}
+\DoxyCodeLine{00063\ \ \ \ \ BRICKSTYLE\_LIFE,}
+\DoxyCodeLine{00064\ \ \ \ \ BRICKSTYLE\_NB,}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \}brickstyle\_e;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ brickstyle\_e\ style;}
+\DoxyCodeLine{00070\ \ \ \ \ int16\_t\ x1;}
+\DoxyCodeLine{00071\ \ \ \ \ int16\_t\ x2;}
+\DoxyCodeLine{00072\ \ \ \ \ int16\_t\ y1;}
+\DoxyCodeLine{00073\ \ \ \ \ int16\_t\ y2;}
+\DoxyCodeLine{00074\ \}\mbox{\hyperlink{structbrick__t}{brick\_t}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{structbrick__t}{brick\_t}}\ bricks[NB\_MAX\_BRICKS];}
+\DoxyCodeLine{00078\ \ \ \ \ uint8\_t\ nb\_bricks\_remaining;}
+\DoxyCodeLine{00079\ \}\mbox{\hyperlink{structgrid__t}{grid\_t}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ BREAKBRICKS\_init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ BREAKBRICKS\_process\_main(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ BREAKBRICKS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

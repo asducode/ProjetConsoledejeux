@@ -1,0 +1,174 @@
+\doxysection{pong.\+h File Reference}
+\hypertarget{pong_8h}{}\label{pong_8h}\index{pong.h@{pong.h}}
+
+
+Gestion du jeu Pong.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}stm32g4\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}stm32g4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structracket__t}{racket\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant une raquette. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structball__t}{ball\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant la balle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{pong_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{pong_8h_a2cd109632a6dcccaa80b43561b1ab700} 
+\#define {\bfseries SCREEN\+\_\+\+WIDTH}~320
+\begin{DoxyCompactList}\small\item\em Largeur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{pong_8h_a6974d08a74da681b3957b2fead2608b8}\label{pong_8h_a6974d08a74da681b3957b2fead2608b8} 
+\#define {\bfseries SCREEN\+\_\+\+HEIGHT}~240
+\begin{DoxyCompactList}\small\item\em Hauteur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{pong_8h_a9aa7b6071d49bc55bff6655967dbae3b}\label{pong_8h_a9aa7b6071d49bc55bff6655967dbae3b} 
+\#define {\bfseries MARGIN\+\_\+\+DEFAULT}~2
+\begin{DoxyCompactList}\small\item\em Marge par défaut en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{pong_8h_a9a68a79039d7304de93118f453d4a1b3}\label{pong_8h_a9a68a79039d7304de93118f453d4a1b3} 
+\#define {\bfseries RACKET\+\_\+\+SPEED}~15
+\begin{DoxyCompactList}\small\item\em Vitesse de déplacement des raquettes. \end{DoxyCompactList}\item 
+\Hypertarget{pong_8h_a927f3fbfb549f427b47b05167088ba0f}\label{pong_8h_a927f3fbfb549f427b47b05167088ba0f} 
+\#define {\bfseries REFRESH\+\_\+\+PERIOD\+\_\+\+MS}~30
+\begin{DoxyCompactList}\small\item\em Période de rafraîchissement du jeu en millisecondes. \end{DoxyCompactList}\item 
+\Hypertarget{pong_8h_acaca71ee7ffab297e129ff54e655e310}\label{pong_8h_acaca71ee7ffab297e129ff54e655e310} 
+\#define {\bfseries RACKET\+\_\+\+WIDTH}~4
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}une raquette en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{pong_8h_ae43ec126eaff06a9a8c6a639c04d67aa}\label{pong_8h_ae43ec126eaff06a9a8c6a639c04d67aa} 
+\#define {\bfseries RACKET\+\_\+\+HEIGHT}~35
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}une raquette en pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414da29564c432d162a18a22873aaeb475958}{GAME\+\_\+\+WAIT\+\_\+\+START}}
+, \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414dafa3770814c2d9fbc78876d7ba4aa36ca}{GAME\+\_\+\+RUNNING}}
+, \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414da871723195985a4ae22d7e10d99bf8a00}{GAME\+\_\+\+OVER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Énumération des états possibles du jeu. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35}{ball\+\_\+options\+\_\+e}} \{ \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35aa0dd792594e499c206806135fc64c79d}{BALL\+\_\+\+OPTION\+\_\+\+NONE}}
+, \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a707dc1ffeb33cb17dc46a41ae0aa9863}{BALL\+\_\+\+OPTION\+\_\+\+JOKER}}
+, \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a08062a751ce72d75924755c4be5d81f2}{BALL\+\_\+\+OPTION\+\_\+\+GLUE}}
+, \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a320c4de1cab266216d2d4cfe9dbed279}{BALL\+\_\+\+OPTION\+\_\+\+NB}}
+ \}
+\begin{DoxyCompactList}\small\item\em Énumération des options possibles pour la balle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pong_8h_a9c9478aa5dc05a161fe6b0c4fbde6fb8}{PONG\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise le jeu Pong. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pong_8h_a51cbf999385c4a6546d5d2089300898a}{PONG\+\_\+process\+\_\+main}} (void)
+\begin{DoxyCompactList}\small\item\em Fonction principale de traitement du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pong_8h_a60c9ec6d41b0ebcc4f49fe43b1810c67}{DISPLAY\+\_\+show\+\_\+winner}} (uint8\+\_\+t winner)
+\begin{DoxyCompactList}\small\item\em Affiche le gagnant de la partie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion du jeu Pong. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les définitions et structures nécessaires pour le jeu Pong, incluant les dimensions du terrain, les raquettes, la balle et les états du jeu. 
+
+\label{doc-enum-members}
+\Hypertarget{pong_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{pong_8h_aea0295c14c1c32a386d62574ddf8dc35}\index{pong.h@{pong.h}!ball\_options\_e@{ball\_options\_e}}
+\index{ball\_options\_e@{ball\_options\_e}!pong.h@{pong.h}}
+\doxysubsubsection{\texorpdfstring{ball\_options\_e}{ball\_options\_e}}
+{\footnotesize\ttfamily \label{pong_8h_aea0295c14c1c32a386d62574ddf8dc35} 
+enum \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35}{ball\+\_\+options\+\_\+e}}}
+
+
+
+Énumération des options possibles pour la balle. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BALL\_OPTION\_NONE@{BALL\_OPTION\_NONE}!pong.h@{pong.h}}\index{pong.h@{pong.h}!BALL\_OPTION\_NONE@{BALL\_OPTION\_NONE}}}\Hypertarget{pong_8h_aea0295c14c1c32a386d62574ddf8dc35aa0dd792594e499c206806135fc64c79d}\label{pong_8h_aea0295c14c1c32a386d62574ddf8dc35aa0dd792594e499c206806135fc64c79d} 
+BALL\+\_\+\+OPTION\+\_\+\+NONE&Aucune option \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BALL\_OPTION\_JOKER@{BALL\_OPTION\_JOKER}!pong.h@{pong.h}}\index{pong.h@{pong.h}!BALL\_OPTION\_JOKER@{BALL\_OPTION\_JOKER}}}\Hypertarget{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a707dc1ffeb33cb17dc46a41ae0aa9863}\label{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a707dc1ffeb33cb17dc46a41ae0aa9863} 
+BALL\+\_\+\+OPTION\+\_\+\+JOKER&Option joker \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BALL\_OPTION\_GLUE@{BALL\_OPTION\_GLUE}!pong.h@{pong.h}}\index{pong.h@{pong.h}!BALL\_OPTION\_GLUE@{BALL\_OPTION\_GLUE}}}\Hypertarget{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a08062a751ce72d75924755c4be5d81f2}\label{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a08062a751ce72d75924755c4be5d81f2} 
+BALL\+\_\+\+OPTION\+\_\+\+GLUE&Option colle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BALL\_OPTION\_NB@{BALL\_OPTION\_NB}!pong.h@{pong.h}}\index{pong.h@{pong.h}!BALL\_OPTION\_NB@{BALL\_OPTION\_NB}}}\Hypertarget{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a320c4de1cab266216d2d4cfe9dbed279}\label{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a320c4de1cab266216d2d4cfe9dbed279} 
+BALL\+\_\+\+OPTION\+\_\+\+NB&Nombre d\textquotesingle{}options \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{pong_8h_a4edce1ca040716922b6e4a79be4e414d}\index{pong.h@{pong.h}!game\_state\_t@{game\_state\_t}}
+\index{game\_state\_t@{game\_state\_t}!pong.h@{pong.h}}
+\doxysubsubsection{\texorpdfstring{game\_state\_t}{game\_state\_t}}
+{\footnotesize\ttfamily \label{pong_8h_a4edce1ca040716922b6e4a79be4e414d} 
+enum \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t}}}
+
+
+
+Énumération des états possibles du jeu. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_WAIT\_START@{GAME\_WAIT\_START}!pong.h@{pong.h}}\index{pong.h@{pong.h}!GAME\_WAIT\_START@{GAME\_WAIT\_START}}}\Hypertarget{pong_8h_a4edce1ca040716922b6e4a79be4e414da29564c432d162a18a22873aaeb475958}\label{pong_8h_a4edce1ca040716922b6e4a79be4e414da29564c432d162a18a22873aaeb475958} 
+GAME\+\_\+\+WAIT\+\_\+\+START&En attente du début de la partie \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_RUNNING@{GAME\_RUNNING}!pong.h@{pong.h}}\index{pong.h@{pong.h}!GAME\_RUNNING@{GAME\_RUNNING}}}\Hypertarget{pong_8h_a4edce1ca040716922b6e4a79be4e414dafa3770814c2d9fbc78876d7ba4aa36ca}\label{pong_8h_a4edce1ca040716922b6e4a79be4e414dafa3770814c2d9fbc78876d7ba4aa36ca} 
+GAME\+\_\+\+RUNNING&Partie en cours \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER@{GAME\_OVER}!pong.h@{pong.h}}\index{pong.h@{pong.h}!GAME\_OVER@{GAME\_OVER}}}\Hypertarget{pong_8h_a4edce1ca040716922b6e4a79be4e414da871723195985a4ae22d7e10d99bf8a00}\label{pong_8h_a4edce1ca040716922b6e4a79be4e414da871723195985a4ae22d7e10d99bf8a00} 
+GAME\+\_\+\+OVER&Partie terminée \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{pong_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{pong_8h_a60c9ec6d41b0ebcc4f49fe43b1810c67}\index{pong.h@{pong.h}!DISPLAY\_show\_winner@{DISPLAY\_show\_winner}}
+\index{DISPLAY\_show\_winner@{DISPLAY\_show\_winner}!pong.h@{pong.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_show\_winner()}{DISPLAY\_show\_winner()}}
+{\footnotesize\ttfamily \label{pong_8h_a60c9ec6d41b0ebcc4f49fe43b1810c67} 
+void DISPLAY\+\_\+show\+\_\+winner (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{winner}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le gagnant de la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winner} & Numéro du joueur gagnant (1 ou 2) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{pong_8h_a9c9478aa5dc05a161fe6b0c4fbde6fb8}\index{pong.h@{pong.h}!PONG\_init@{PONG\_init}}
+\index{PONG\_init@{PONG\_init}!pong.h@{pong.h}}
+\doxysubsubsection{\texorpdfstring{PONG\_init()}{PONG\_init()}}
+{\footnotesize\ttfamily \label{pong_8h_a9c9478aa5dc05a161fe6b0c4fbde6fb8} 
+void PONG\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initialise le jeu Pong. 
+
+Configure les paramètres initiaux du jeu, la position des raquettes et de la balle \Hypertarget{pong_8h_a51cbf999385c4a6546d5d2089300898a}\index{pong.h@{pong.h}!PONG\_process\_main@{PONG\_process\_main}}
+\index{PONG\_process\_main@{PONG\_process\_main}!pong.h@{pong.h}}
+\doxysubsubsection{\texorpdfstring{PONG\_process\_main()}{PONG\_process\_main()}}
+{\footnotesize\ttfamily \label{pong_8h_a51cbf999385c4a6546d5d2089300898a} 
+void PONG\+\_\+process\+\_\+main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Fonction principale de traitement du jeu. 
+
+Cette fonction gère la logique du jeu, les collisions et les mises à jour
+
+Fonction principale de traitement du jeu.
+
+Met à jour la position des raquettes et de la balle, gère les collisions et le score uint8\+\_\+t button\+\_\+down = BUTTON\+\_\+down\+\_\+read();

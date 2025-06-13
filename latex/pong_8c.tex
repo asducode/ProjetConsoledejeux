@@ -1,0 +1,174 @@
+\doxysection{pong.\+c File Reference}
+\hypertarget{pong_8c}{}\label{pong_8c}\index{pong.c@{pong.c}}
+
+
+Implémentation du jeu Pong.  
+
+
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include "{}pong.\+h"{}}\newline
+{\ttfamily \#include "{}button.\+h"{}}\newline
+{\ttfamily \#include "{}display.\+h"{}}\newline
+{\ttfamily \#include "{}stdbool.\+h"{}}\newline
+{\ttfamily \#include "{}stm32g4\+\_\+systick.\+h"{}}\newline
+{\ttfamily \#include "{}stm32g4\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}TFT\+\_\+ili9341/stm32g4\+\_\+ili9341.\+h"{}}\newline
+{\ttfamily \#include "{}TFT\+\_\+ili9341/stm32g4\+\_\+fonts.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}stm32g4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}stm32g4\+\_\+uart.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pong_8c_a60c9ec6d41b0ebcc4f49fe43b1810c67}{DISPLAY\+\_\+show\+\_\+winner}} (uint8\+\_\+t winner)
+\begin{DoxyCompactList}\small\item\em Affiche le gagnant de la partie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pong_8c_a9c9478aa5dc05a161fe6b0c4fbde6fb8}{PONG\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise le jeu Pong. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pong_8c_a51cbf999385c4a6546d5d2089300898a}{PONG\+\_\+process\+\_\+main}} (void)
+\begin{DoxyCompactList}\small\item\em Gère la logique du jeu Pong. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pong_8c_a7ff808da61a8e9f891af044614f70ff6}{check\+Paddle\+Collision}} (int ballX, int ballY)
+\begin{DoxyCompactList}\small\item\em Gère les collisions de la balle avec les raquettes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pong_8c_a10ecdf26228f59ddfc4260ac3b6bb3cf}{check\+Wall\+Collision}} (int ballX, int ballY)
+\begin{DoxyCompactList}\small\item\em Gère les collisions de la balle avec les murs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pong_8c_a7b60a1a0e8bd5c96bf8fc4b251ff90f0}{update\+Paddles}} (int player1\+Direction, int player2\+Direction)
+\begin{DoxyCompactList}\small\item\em Met à jour la position des raquettes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pong_8c_a37f1c0bbeaa6eff4e9e842b19e10e7db}{check\+Score}} (int ballX)
+\begin{DoxyCompactList}\small\item\em Vérifie si un point a été marqué \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pong_8c_a47df39cc446bfc36db6289cc2c9ff096}{check\+Game\+Over}} (void)
+\begin{DoxyCompactList}\small\item\em Vérifie si la partie est terminée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation du jeu Pong. 
+
+Ce fichier contient la logique du jeu Pong, un jeu classique de tennis de table où deux joueurs contrôlent des raquettes pour renvoyer une balle. 
+
+\label{doc-func-members}
+\Hypertarget{pong_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{pong_8c_a47df39cc446bfc36db6289cc2c9ff096}\index{pong.c@{pong.c}!checkGameOver@{checkGameOver}}
+\index{checkGameOver@{checkGameOver}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{checkGameOver()}{checkGameOver()}}
+{\footnotesize\ttfamily \label{pong_8c_a47df39cc446bfc36db6289cc2c9ff096} 
+int check\+Game\+Over (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si la partie est terminée. 
+
+\begin{DoxyReturn}{Returns}
+1 si la partie est terminée, 0 sinon 
+\end{DoxyReturn}
+\Hypertarget{pong_8c_a7ff808da61a8e9f891af044614f70ff6}\index{pong.c@{pong.c}!checkPaddleCollision@{checkPaddleCollision}}
+\index{checkPaddleCollision@{checkPaddleCollision}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{checkPaddleCollision()}{checkPaddleCollision()}}
+{\footnotesize\ttfamily \label{pong_8c_a7ff808da61a8e9f891af044614f70ff6} 
+int check\+Paddle\+Collision (\begin{DoxyParamCaption}\item[{int}]{ballX}{, }\item[{int}]{ballY}{}\end{DoxyParamCaption})}
+
+
+
+Gère les collisions de la balle avec les raquettes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ballX} & Position X de la balle \\
+\hline
+{\em ballY} & Position Y de la balle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si une collision est détectée, 0 sinon 
+\end{DoxyReturn}
+\Hypertarget{pong_8c_a37f1c0bbeaa6eff4e9e842b19e10e7db}\index{pong.c@{pong.c}!checkScore@{checkScore}}
+\index{checkScore@{checkScore}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{checkScore()}{checkScore()}}
+{\footnotesize\ttfamily \label{pong_8c_a37f1c0bbeaa6eff4e9e842b19e10e7db} 
+int check\+Score (\begin{DoxyParamCaption}\item[{int}]{ballX}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si un point a été marqué 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ballX} & Position X de la balle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si un point est marqué, 0 sinon 
+\end{DoxyReturn}
+\Hypertarget{pong_8c_a10ecdf26228f59ddfc4260ac3b6bb3cf}\index{pong.c@{pong.c}!checkWallCollision@{checkWallCollision}}
+\index{checkWallCollision@{checkWallCollision}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{checkWallCollision()}{checkWallCollision()}}
+{\footnotesize\ttfamily \label{pong_8c_a10ecdf26228f59ddfc4260ac3b6bb3cf} 
+int check\+Wall\+Collision (\begin{DoxyParamCaption}\item[{int}]{ballX}{, }\item[{int}]{ballY}{}\end{DoxyParamCaption})}
+
+
+
+Gère les collisions de la balle avec les murs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ballX} & Position X de la balle \\
+\hline
+{\em ballY} & Position Y de la balle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si une collision est détectée, 0 sinon 
+\end{DoxyReturn}
+\Hypertarget{pong_8c_a60c9ec6d41b0ebcc4f49fe43b1810c67}\index{pong.c@{pong.c}!DISPLAY\_show\_winner@{DISPLAY\_show\_winner}}
+\index{DISPLAY\_show\_winner@{DISPLAY\_show\_winner}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_show\_winner()}{DISPLAY\_show\_winner()}}
+{\footnotesize\ttfamily \label{pong_8c_a60c9ec6d41b0ebcc4f49fe43b1810c67} 
+void DISPLAY\+\_\+show\+\_\+winner (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{winner}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le gagnant de la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winner} & Numéro du joueur gagnant (1 ou 2) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{pong_8c_a9c9478aa5dc05a161fe6b0c4fbde6fb8}\index{pong.c@{pong.c}!PONG\_init@{PONG\_init}}
+\index{PONG\_init@{PONG\_init}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{PONG\_init()}{PONG\_init()}}
+{\footnotesize\ttfamily \label{pong_8c_a9c9478aa5dc05a161fe6b0c4fbde6fb8} 
+void PONG\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initialise le jeu Pong. 
+
+Configure les paramètres initiaux du jeu, la position des raquettes et de la balle \Hypertarget{pong_8c_a51cbf999385c4a6546d5d2089300898a}\index{pong.c@{pong.c}!PONG\_process\_main@{PONG\_process\_main}}
+\index{PONG\_process\_main@{PONG\_process\_main}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{PONG\_process\_main()}{PONG\_process\_main()}}
+{\footnotesize\ttfamily \label{pong_8c_a51cbf999385c4a6546d5d2089300898a} 
+void PONG\+\_\+process\+\_\+main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gère la logique du jeu Pong. 
+
+Fonction principale de traitement du jeu.
+
+Met à jour la position des raquettes et de la balle, gère les collisions et le score uint8\+\_\+t button\+\_\+down = BUTTON\+\_\+down\+\_\+read();\Hypertarget{pong_8c_a7b60a1a0e8bd5c96bf8fc4b251ff90f0}\index{pong.c@{pong.c}!updatePaddles@{updatePaddles}}
+\index{updatePaddles@{updatePaddles}!pong.c@{pong.c}}
+\doxysubsubsection{\texorpdfstring{updatePaddles()}{updatePaddles()}}
+{\footnotesize\ttfamily \label{pong_8c_a7b60a1a0e8bd5c96bf8fc4b251ff90f0} 
+void update\+Paddles (\begin{DoxyParamCaption}\item[{int}]{player1\+Direction}{, }\item[{int}]{player2\+Direction}{}\end{DoxyParamCaption})}
+
+
+
+Met à jour la position des raquettes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1\+Direction} & Direction de déplacement de la raquette du joueur 1 \\
+\hline
+{\em player2\+Direction} & Direction de déplacement de la raquette du joueur 2 \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,83 @@
+\doxysection{display.\+h File Reference}
+\hypertarget{display_8h}{}\label{display_8h}\index{display.h@{display.h}}
+
+
+Gestion de l\textquotesingle{}affichage pour le jeu de Pong.  
+
+
+{\ttfamily \#include "{}pong.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{display_8h_a7ffe3a1eb9de5d766a71c82b9e29479e}\label{display_8h_a7ffe3a1eb9de5d766a71c82b9e29479e} 
+void {\bfseries DISPLAY\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}affichage pour le jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a0e8bac5c536c6e5312a976411d304c66}{DISPLAY\+\_\+refresh\+\_\+ball}} (\mbox{\hyperlink{structball__t}{ball\+\_\+t}} \texorpdfstring{$\ast$}{*}ball)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage de la balle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a4170b898c7164728e928b1ea86b6cc75}{DISPLAY\+\_\+refresh\+\_\+racket}} (\mbox{\hyperlink{structracket__t}{racket\+\_\+t}} \texorpdfstring{$\ast$}{*}racket)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage d\textquotesingle{}une raquette. \end{DoxyCompactList}\item 
+\Hypertarget{display_8h_a48e2334fdc0acdcfc6f772c8ebee5a70}\label{display_8h_a48e2334fdc0acdcfc6f772c8ebee5a70} 
+void {\bfseries DISPLAY\+\_\+draw\+\_\+middle\+\_\+line} (void)
+\begin{DoxyCompactList}\small\item\em Dessine la ligne centrale du terrain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_ae632c1543bd1c289a5bf0f5b6b9f8197}{DISPLAY\+\_\+show\+\_\+scores}} (uint8\+\_\+t score\+\_\+p1, uint8\+\_\+t score\+\_\+p2)
+\begin{DoxyCompactList}\small\item\em Affiche les scores des deux joueurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}affichage pour le jeu de Pong. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les fonctions pour gérer l\textquotesingle{}affichage du jeu Pong sur l\textquotesingle{}écran TFT, incluant l\textquotesingle{}affichage de la balle, des raquettes, de la ligne centrale et des scores. 
+
+\label{doc-func-members}
+\Hypertarget{display_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{display_8h_a0e8bac5c536c6e5312a976411d304c66}\index{display.h@{display.h}!DISPLAY\_refresh\_ball@{DISPLAY\_refresh\_ball}}
+\index{DISPLAY\_refresh\_ball@{DISPLAY\_refresh\_ball}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_refresh\_ball()}{DISPLAY\_refresh\_ball()}}
+{\footnotesize\ttfamily \label{display_8h_a0e8bac5c536c6e5312a976411d304c66} 
+void DISPLAY\+\_\+refresh\+\_\+ball (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structball__t}{ball\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ball}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage de la balle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & Pointeur vers la structure de la balle à afficher \\
+\hline
+\end{DoxyParams}
+\Hypertarget{display_8h_a4170b898c7164728e928b1ea86b6cc75}\index{display.h@{display.h}!DISPLAY\_refresh\_racket@{DISPLAY\_refresh\_racket}}
+\index{DISPLAY\_refresh\_racket@{DISPLAY\_refresh\_racket}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_refresh\_racket()}{DISPLAY\_refresh\_racket()}}
+{\footnotesize\ttfamily \label{display_8h_a4170b898c7164728e928b1ea86b6cc75} 
+void DISPLAY\+\_\+refresh\+\_\+racket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structracket__t}{racket\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{racket}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage d\textquotesingle{}une raquette. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em racket} & Pointeur vers la structure de la raquette à afficher \\
+\hline
+\end{DoxyParams}
+\Hypertarget{display_8h_ae632c1543bd1c289a5bf0f5b6b9f8197}\index{display.h@{display.h}!DISPLAY\_show\_scores@{DISPLAY\_show\_scores}}
+\index{DISPLAY\_show\_scores@{DISPLAY\_show\_scores}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_show\_scores()}{DISPLAY\_show\_scores()}}
+{\footnotesize\ttfamily \label{display_8h_ae632c1543bd1c289a5bf0f5b6b9f8197} 
+void DISPLAY\+\_\+show\+\_\+scores (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{score\+\_\+p1}{, }\item[{uint8\+\_\+t}]{score\+\_\+p2}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les scores des deux joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score\+\_\+p1} & Score du joueur 1 \\
+\hline
+{\em score\+\_\+p2} & Score du joueur 2 \\
+\hline
+\end{DoxyParams}

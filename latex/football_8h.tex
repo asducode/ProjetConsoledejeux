@@ -1,0 +1,84 @@
+\doxysection{football.\+h File Reference}
+\hypertarget{football_8h}{}\label{football_8h}\index{football.h@{football.h}}
+
+
+Gestion du jeu de Football.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}stm32g4\+\_\+utils.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplayerfoot__t}{playerfoot\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un joueur. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structballfoot__t}{ballfoot\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant la balle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{football_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{football_8h_a2cd109632a6dcccaa80b43561b1ab700} 
+\#define {\bfseries SCREEN\+\_\+\+WIDTH}~320
+\begin{DoxyCompactList}\small\item\em Largeur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{football_8h_a6974d08a74da681b3957b2fead2608b8}\label{football_8h_a6974d08a74da681b3957b2fead2608b8} 
+\#define {\bfseries SCREEN\+\_\+\+HEIGHT}~240
+\begin{DoxyCompactList}\small\item\em Hauteur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{football_8h_ac4029d34dc57b2100896f491fd34b92c}\label{football_8h_ac4029d34dc57b2100896f491fd34b92c} 
+\#define {\bfseries GOAL\+\_\+\+LENGTH}~60
+\begin{DoxyCompactList}\small\item\em Longueur du but en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{football_8h_a8b8d313bf1d7faed6ceecc2a1c41484b}\label{football_8h_a8b8d313bf1d7faed6ceecc2a1c41484b} 
+\#define {\bfseries PLAYER\+\_\+\+WIDTH\+\_\+\+FOOT}~15
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}un joueur en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{football_8h_a743603a0d1eaaa02ff1bb04894b4e2b3}\label{football_8h_a743603a0d1eaaa02ff1bb04894b4e2b3} 
+\#define {\bfseries PLAYER\+\_\+\+HEIGHT\+\_\+\+FOOT}~40
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}un joueur en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{football_8h_a6745f84c2e85b7c74723bf5044a367bc}\label{football_8h_a6745f84c2e85b7c74723bf5044a367bc} 
+\#define {\bfseries BALL\+\_\+\+SIZE\+\_\+\+FOOT}~10
+\begin{DoxyCompactList}\small\item\em Taille de la balle en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{football_8h_a04c036e38d8900297665473dcf584943}\label{football_8h_a04c036e38d8900297665473dcf584943} 
+\#define {\bfseries PLAYER\+\_\+\+SPEED\+\_\+\+FOOT}~5
+\begin{DoxyCompactList}\small\item\em Vitesse de déplacement des joueurs. \end{DoxyCompactList}\item 
+\Hypertarget{football_8h_ab28e9baba823e5c0699ca79323f9263f}\label{football_8h_ab28e9baba823e5c0699ca79323f9263f} 
+\#define {\bfseries BALL\+\_\+\+SPEED\+\_\+\+FOOT}~4
+\begin{DoxyCompactList}\small\item\em Vitesse de déplacement de la balle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{football_8h_a8caecb42a8641198c707d348b3252965}\label{football_8h_a8caecb42a8641198c707d348b3252965} 
+enum \mbox{\hyperlink{football_8h_a8caecb42a8641198c707d348b3252965}{gamefoot\+\_\+state\+\_\+t}} \{ {\bfseries FOOT\+\_\+\+GAME\+\_\+\+WAIT\+\_\+\+START}
+, {\bfseries FOOT\+\_\+\+GAME\+\_\+\+RUNNING}
+, {\bfseries FOOT\+\_\+\+GAME\+\_\+\+OVER}
+ \}
+\begin{DoxyCompactList}\small\item\em Énumération des états possibles du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{football_8h_a5ee7136a2d8732f9d701dcf148cca982}\label{football_8h_a5ee7136a2d8732f9d701dcf148cca982} 
+void {\bfseries FOOTBALL\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise le jeu de Football. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{football_8h_abca610a68a004ac6bef65ff87927397f}{FOOTBALL\+\_\+process\+\_\+main}} (void)
+\begin{DoxyCompactList}\small\item\em Fonction principale de traitement du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion du jeu de Football. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les définitions et structures nécessaires pour le jeu de Football, incluant les dimensions du terrain, les joueurs, la balle et les états du jeu. 
+
+\label{doc-func-members}
+\Hypertarget{football_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{football_8h_abca610a68a004ac6bef65ff87927397f}\index{football.h@{football.h}!FOOTBALL\_process\_main@{FOOTBALL\_process\_main}}
+\index{FOOTBALL\_process\_main@{FOOTBALL\_process\_main}!football.h@{football.h}}
+\doxysubsubsection{\texorpdfstring{FOOTBALL\_process\_main()}{FOOTBALL\_process\_main()}}
+{\footnotesize\ttfamily \label{football_8h_abca610a68a004ac6bef65ff87927397f} 
+void FOOTBALL\+\_\+process\+\_\+main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Fonction principale de traitement du jeu. 
+
+Cette fonction gère la logique du jeu, les collisions et les mises à jour 

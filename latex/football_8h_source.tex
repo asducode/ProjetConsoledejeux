@@ -1,0 +1,53 @@
+\doxysection{football.\+h}
+\hypertarget{football_8h_source}{}\label{football_8h_source}\mbox{\hyperlink{football_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ FOOTBALL\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ FOOTBALL\_H\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_utils.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ SCREEN\_WIDTH\ \ \ 320}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SCREEN\_HEIGHT\ \ 240}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ GOAL\_LENGTH\ \ \ \ 60\ \ }\textcolor{comment}{//\ Longueur\ du\ but}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ PLAYER\_WIDTH\_FOOT\ \ \ 15}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ PLAYER\_HEIGHT\_FOOT\ \ 40}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ BALL\_SIZE\_FOOT\ \ \ \ \ \ 10}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ PLAYER\_SPEED\_FOOT\ \ \ 5}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ BALL\_SPEED\_FOOT\ \ \ \ \ 4}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ FOOT\_GAME\_WAIT\_START,}
+\DoxyCodeLine{00061\ \ \ \ \ FOOT\_GAME\_RUNNING,}
+\DoxyCodeLine{00062\ \ \ \ \ FOOT\_GAME\_OVER}
+\DoxyCodeLine{00063\ \}\ \mbox{\hyperlink{football_8h_a8caecb42a8641198c707d348b3252965}{gamefoot\_state\_t}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ int16\_t\ x,\ y;}
+\DoxyCodeLine{00070\ \ \ \ \ int16\_t\ prev\_x,\ prev\_y;}
+\DoxyCodeLine{00071\ \ \ \ \ int16\_t\ width,\ height;}
+\DoxyCodeLine{00072\ \ \ \ \ int16\_t\ speed\_x,\ speed\_y;}
+\DoxyCodeLine{00073\ \}\ \mbox{\hyperlink{structplayerfoot__t}{playerfoot\_t}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00079\ \ \ \ \ int16\_t\ x,\ y;}
+\DoxyCodeLine{00080\ \ \ \ \ int16\_t\ speed\_x,\ speed\_y;}
+\DoxyCodeLine{00081\ \ \ \ \ int16\_t\ size;}
+\DoxyCodeLine{00082\ \}\ \mbox{\hyperlink{structballfoot__t}{ballfoot\_t}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{football_8h_a5ee7136a2d8732f9d701dcf148cca982}{FOOTBALL\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{football_8h_abca610a68a004ac6bef65ff87927397f}{FOOTBALL\_process\_main}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ FOOTBALL\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

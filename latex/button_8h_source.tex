@@ -1,0 +1,35 @@
+\doxysection{button.\+h}
+\hypertarget{button_8h_source}{}\label{button_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ button.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ BUTTON\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_utils.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}stm32g4xx\_hal.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BUTTON\_H\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ BUTTON\_NO\_EVENT,}
+\DoxyCodeLine{00017\ \ \ \ \ BUTTON\_PRESS\_EVENT,}
+\DoxyCodeLine{00018\ \ \ \ \ BUTTON\_RELEASE\_EVENT}
+\DoxyCodeLine{00019\ \}button\_e;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ BUTTONS\_init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ BUTTONS\_update(button\_e\ *\ button\_left\_event,\ button\_e\ *\ button\_right\_event,\ button\_e\ *\ button\_up\_event,\ button\_e\ *\ button\_down\_event,\ button\_e\ *\ button\_center\_event);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{bool}\ BUTTON\_left\_read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{bool}\ BUTTON\_right\_read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{bool}\ BUTTON\_up\_read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{bool}\ BUTTON\_down\_read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{bool}\ BUTTON\_center\_read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ BUTTON\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

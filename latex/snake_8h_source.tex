@@ -1,0 +1,41 @@
+\doxysection{snake.\+h}
+\hypertarget{snake_8h_source}{}\label{snake_8h_source}\mbox{\hyperlink{snake_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SNAKE\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SNAKE\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ MAX\_SNAKE\_LENGTH\ 1000}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa0b76fb863426c07c6c997a8d9523257b}{DIR\_UP}},\ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaab1bf68da897d09488069dd40e54f442d}{DIR\_DOWN}},\ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa1307dc42d06472935155dcbe283bc660}{DIR\_LEFT}},\ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa5dd21ef3d450f62c44082756cab8f6f8}{DIR\_RIGHT}}\ \ }
+\DoxyCodeLine{00028\ \}\ \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097ecea}{directionsnake\_t}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ uint8\_t\ x,\ \mbox{\hyperlink{structpositionsnake__t_acef1314d3fcf3f08516fd638a5c49fb7}{y}};\ \ }
+\DoxyCodeLine{00035\ \}\ \mbox{\hyperlink{structpositionsnake__t}{positionsnake\_t}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{structpositionsnake__t}{positionsnake\_t}}\ \mbox{\hyperlink{structsnake__t_ab7185bcb6fde910c7d6dd7754b47587b}{body}}[\mbox{\hyperlink{snake_8h_a3b57363c10b62b64db916289b0437cfb}{MAX\_SNAKE\_LENGTH}}];\ \ }
+\DoxyCodeLine{00042\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structsnake__t_a07ee3c80ef8e483b4f62e689dfd5e2a7}{length}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097ecea}{directionsnake\_t}}\ \mbox{\hyperlink{structsnake__t_ac024eca360eb730b950a7d29f039df3a}{dir}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \}\ \mbox{\hyperlink{structsnake__t}{snake\_t}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ uint8\_t\ x,\ \mbox{\hyperlink{structapple__t_a54da98cd5e8846832ab526c86f704c35}{y}};\ \ }
+\DoxyCodeLine{00051\ \}\ \mbox{\hyperlink{structapple__t}{apple\_t}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{snake_8h_af14013239c879d88333a5d13af3b9336}{snake\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{snake_8h_a9ad0c6652388f93a9690220ecca59e25}{snake\_update}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

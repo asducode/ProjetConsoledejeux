@@ -1,0 +1,121 @@
+\doxysection{displaysnake.\+h File Reference}
+\hypertarget{displaysnake_8h}{}\label{displaysnake_8h}\index{displaysnake.h@{displaysnake.h}}
+
+
+Gestion de l\textquotesingle{}affichage pour le jeu Snake.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}snake.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{displaysnake_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{displaysnake_8h_a2cd109632a6dcccaa80b43561b1ab700} 
+\#define {\bfseries SCREEN\+\_\+\+WIDTH}~240
+\begin{DoxyCompactList}\small\item\em Largeur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{displaysnake_8h_a6974d08a74da681b3957b2fead2608b8}\label{displaysnake_8h_a6974d08a74da681b3957b2fead2608b8} 
+\#define {\bfseries SCREEN\+\_\+\+HEIGHT}~320
+\begin{DoxyCompactList}\small\item\em Hauteur de l\textquotesingle{}écran en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{displaysnake_8h_a7a4127f14f16563da90eb3c836bc404f}\label{displaysnake_8h_a7a4127f14f16563da90eb3c836bc404f} 
+\#define {\bfseries CELL\+\_\+\+SIZE}~10
+\begin{DoxyCompactList}\small\item\em Taille d\textquotesingle{}une cellule de la grille en pixels. \end{DoxyCompactList}\item 
+\Hypertarget{displaysnake_8h_a804eeb9892adae7306540eb33f2326eb}\label{displaysnake_8h_a804eeb9892adae7306540eb33f2326eb} 
+\#define {\bfseries GRID\+\_\+\+WIDTH}~(\mbox{\hyperlink{displaysnake_8h_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\+\_\+\+WIDTH}} / \mbox{\hyperlink{displaysnake_8h_a7a4127f14f16563da90eb3c836bc404f}{CELL\+\_\+\+SIZE}})
+\begin{DoxyCompactList}\small\item\em Largeur de la grille en nombre de cellules. \end{DoxyCompactList}\item 
+\Hypertarget{displaysnake_8h_a8bd9f95c4e7d0ae683aaa0434a72dca9}\label{displaysnake_8h_a8bd9f95c4e7d0ae683aaa0434a72dca9} 
+\#define {\bfseries GRID\+\_\+\+HEIGHT}~(\mbox{\hyperlink{displaysnake_8h_a6974d08a74da681b3957b2fead2608b8}{SCREEN\+\_\+\+HEIGHT}} / \mbox{\hyperlink{displaysnake_8h_a7a4127f14f16563da90eb3c836bc404f}{CELL\+\_\+\+SIZE}})
+\begin{DoxyCompactList}\small\item\em Hauteur de la grille en nombre de cellules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{displaysnake_8h_ab07d5dbc8c9ce2d085437331c14fb2a8}\label{displaysnake_8h_ab07d5dbc8c9ce2d085437331c14fb2a8} 
+void {\bfseries DISPLAYSNAKE\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}affichage pour le jeu Snake. \end{DoxyCompactList}\item 
+\Hypertarget{displaysnake_8h_a393587783e8ad30fd211f31ce43509c7}\label{displaysnake_8h_a393587783e8ad30fd211f31ce43509c7} 
+void {\bfseries DISPLAYSNAKE\+\_\+clear} (void)
+\begin{DoxyCompactList}\small\item\em Efface tout l\textquotesingle{}écran. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaysnake_8h_abcb8ace44c78805fee79663d5e5701ea}{DISPLAYSNAKE\+\_\+draw\+\_\+scores}} (uint8\+\_\+t score1, uint8\+\_\+t score2)
+\begin{DoxyCompactList}\small\item\em Affiche les scores des deux joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaysnake_8h_a7d967f6e84c52683cccca10ca75871b0}{DISPLAYSNAKE\+\_\+refresh\+\_\+snake}} (\mbox{\hyperlink{structsnake__t}{snake\+\_\+t}} \texorpdfstring{$\ast$}{*}snake, int player\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage d\textquotesingle{}un serpent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaysnake_8h_a1c072d7f2fa5de1de55be8d5b6f72c83}{DISPLAYSNAKE\+\_\+refresh\+\_\+apple}} (\mbox{\hyperlink{structapple__t}{apple\+\_\+t}} \texorpdfstring{$\ast$}{*}apple)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage d\textquotesingle{}une pomme. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaysnake_8h_a9cac47f6c3638e80da8315f4beaaa8f4}{DISPLAYSNAKE\+\_\+erase\+\_\+snake}} (\mbox{\hyperlink{structsnake__t}{snake\+\_\+t}} \texorpdfstring{$\ast$}{*}snake)
+\begin{DoxyCompactList}\small\item\em Efface un serpent de l\textquotesingle{}écran. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}affichage pour le jeu Snake. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les fonctions pour gérer l\textquotesingle{}affichage du jeu Snake sur l\textquotesingle{}écran TFT, incluant l\textquotesingle{}affichage des serpents, des pommes, des scores et la gestion de la grille de jeu. 
+
+\label{doc-func-members}
+\Hypertarget{displaysnake_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{displaysnake_8h_abcb8ace44c78805fee79663d5e5701ea}\index{displaysnake.h@{displaysnake.h}!DISPLAYSNAKE\_draw\_scores@{DISPLAYSNAKE\_draw\_scores}}
+\index{DISPLAYSNAKE\_draw\_scores@{DISPLAYSNAKE\_draw\_scores}!displaysnake.h@{displaysnake.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYSNAKE\_draw\_scores()}{DISPLAYSNAKE\_draw\_scores()}}
+{\footnotesize\ttfamily \label{displaysnake_8h_abcb8ace44c78805fee79663d5e5701ea} 
+void DISPLAYSNAKE\+\_\+draw\+\_\+scores (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{score1}{, }\item[{uint8\+\_\+t}]{score2}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les scores des deux joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score1} & Score du joueur 1 \\
+\hline
+{\em score2} & Score du joueur 2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaysnake_8h_a9cac47f6c3638e80da8315f4beaaa8f4}\index{displaysnake.h@{displaysnake.h}!DISPLAYSNAKE\_erase\_snake@{DISPLAYSNAKE\_erase\_snake}}
+\index{DISPLAYSNAKE\_erase\_snake@{DISPLAYSNAKE\_erase\_snake}!displaysnake.h@{displaysnake.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYSNAKE\_erase\_snake()}{DISPLAYSNAKE\_erase\_snake()}}
+{\footnotesize\ttfamily \label{displaysnake_8h_a9cac47f6c3638e80da8315f4beaaa8f4} 
+void DISPLAYSNAKE\+\_\+erase\+\_\+snake (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsnake__t}{snake\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{snake}{}\end{DoxyParamCaption})}
+
+
+
+Efface un serpent de l\textquotesingle{}écran. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em snake} & Pointeur vers la structure du serpent à effacer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaysnake_8h_a1c072d7f2fa5de1de55be8d5b6f72c83}\index{displaysnake.h@{displaysnake.h}!DISPLAYSNAKE\_refresh\_apple@{DISPLAYSNAKE\_refresh\_apple}}
+\index{DISPLAYSNAKE\_refresh\_apple@{DISPLAYSNAKE\_refresh\_apple}!displaysnake.h@{displaysnake.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYSNAKE\_refresh\_apple()}{DISPLAYSNAKE\_refresh\_apple()}}
+{\footnotesize\ttfamily \label{displaysnake_8h_a1c072d7f2fa5de1de55be8d5b6f72c83} 
+void DISPLAYSNAKE\+\_\+refresh\+\_\+apple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structapple__t}{apple\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{apple}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage d\textquotesingle{}une pomme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em apple} & Pointeur vers la structure de la pomme à afficher \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaysnake_8h_a7d967f6e84c52683cccca10ca75871b0}\index{displaysnake.h@{displaysnake.h}!DISPLAYSNAKE\_refresh\_snake@{DISPLAYSNAKE\_refresh\_snake}}
+\index{DISPLAYSNAKE\_refresh\_snake@{DISPLAYSNAKE\_refresh\_snake}!displaysnake.h@{displaysnake.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYSNAKE\_refresh\_snake()}{DISPLAYSNAKE\_refresh\_snake()}}
+{\footnotesize\ttfamily \label{displaysnake_8h_a7d967f6e84c52683cccca10ca75871b0} 
+void DISPLAYSNAKE\+\_\+refresh\+\_\+snake (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsnake__t}{snake\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{snake}{, }\item[{int}]{player\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage d\textquotesingle{}un serpent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em snake} & Pointeur vers la structure du serpent à afficher \\
+\hline
+{\em player\+\_\+id} & Identifiant du joueur (1 ou 2) \\
+\hline
+\end{DoxyParams}

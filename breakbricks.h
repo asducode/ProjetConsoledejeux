@@ -1,8 +1,6 @@
 /*
  * breakbricks.h
- *
- *  Created on: Feb 12, 2024
- *      Author: Nirgal
+*
  */
 
 #ifndef BREAKBRICKS_H_

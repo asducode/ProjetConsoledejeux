@@ -1,8 +1,6 @@
 /*
  * button.h
  *
- *  Created on: Feb 12, 2024
- *      Author: Nirgal
  */
 
 #ifndef BUTTON_H_

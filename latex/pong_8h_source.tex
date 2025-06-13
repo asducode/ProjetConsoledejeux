@@ -1,0 +1,70 @@
+\doxysection{pong.\+h}
+\hypertarget{pong_8h_source}{}\label{pong_8h_source}\mbox{\hyperlink{pong_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ PONG\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ PONG\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_utils.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}stm32g4xx\_hal.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ SCREEN\_WIDTH\ \ \ \ 320}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SCREEN\_HEIGHT\ \ \ 240}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ MARGIN\_DEFAULT\ 2}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ RACKET\_SPEED\ 15}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ REFRESH\_PERIOD\_MS\ \ 30}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ RACKET\_WIDTH\ 4}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ RACKET\_HEIGHT\ 35}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414da29564c432d162a18a22873aaeb475958}{GAME\_WAIT\_START}},\ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414dafa3770814c2d9fbc78876d7ba4aa36ca}{GAME\_RUNNING}},\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414da871723195985a4ae22d7e10d99bf8a00}{GAME\_OVER}}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \}\ \mbox{\hyperlink{pong_8h_a4edce1ca040716922b6e4a79be4e414d}{game\_state\_t}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00064\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structracket__t_a6ad3a96621181e2872b2b25c0038671c}{x}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structracket__t_a0e1ee35dc02eb43ded066f4d9aa31e7f}{y}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structracket__t_ada7d3e842d8b4230b49b8d735449d83c}{left}};\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structracket__t_aa179f14d3b012334975b5261434846ef}{right}};\ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structracket__t_a4a95c9cff5106486eeca29c42ef14064}{width}};\ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structracket__t_a7f55ee38e59917a8bfe86d1ed7b0bb69}{height}};\ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structracket__t_aad56342988cb35a7188184d470f1c775}{speed}};\ \ \ \ }
+\DoxyCodeLine{00071\ \}\mbox{\hyperlink{structracket__t}{racket\_t}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35aa0dd792594e499c206806135fc64c79d}{BALL\_OPTION\_NONE}},\ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a707dc1ffeb33cb17dc46a41ae0aa9863}{BALL\_OPTION\_JOKER}},\ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a08062a751ce72d75924755c4be5d81f2}{BALL\_OPTION\_GLUE}},\ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35a320c4de1cab266216d2d4cfe9dbed279}{BALL\_OPTION\_NB}},\ \ \ \ \ }
+\DoxyCodeLine{00081\ \}\mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35}{ball\_options\_e}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00087\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structball__t_a1a82e6425263fd7c586321004e0e4eae}{x}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structball__t_a0fbe4ec3d4e4c479a651b797a2e8c982}{y}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structball__t_a957e1d62029f7d06bd0d321232e0b8a7}{fine\_x}};\ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structball__t_ae7fa3ce0b61da16abd2c5cd9100b07df}{fine\_y}};\ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structball__t_a020ed6ad16fcaed9d156c81e471e607c}{speed\_x}};\ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structball__t_ac18f046c58cafa72b7e111cb878fa3fd}{speed\_y}};\ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structball__t_adc4a6b45a50a55ced35e7b9e4d5ce033}{size}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ int8\_t\ \mbox{\hyperlink{structball__t_a994d5203111ea4082e20a7e0ee8a0b3c}{joker}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{pong_8h_aea0295c14c1c32a386d62574ddf8dc35}{ball\_options\_e}}\ \mbox{\hyperlink{structball__t_a0b0e8493d2dd47da0b2a8db8ab3cc456}{options}};\ }
+\DoxyCodeLine{00096\ \}\mbox{\hyperlink{structball__t}{ball\_t}};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pong_8h_a9c9478aa5dc05a161fe6b0c4fbde6fb8}{PONG\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pong_8h_a51cbf999385c4a6546d5d2089300898a}{PONG\_process\_main}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pong_8h_a60c9ec6d41b0ebcc4f49fe43b1810c67}{DISPLAY\_show\_winner}}(uint8\_t\ winner);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ PONG\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

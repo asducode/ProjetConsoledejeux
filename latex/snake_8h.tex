@@ -1,0 +1,98 @@
+\doxysection{snake.\+h File Reference}
+\hypertarget{snake_8h}{}\label{snake_8h}\index{snake.h@{snake.h}}
+
+
+Gestion du jeu Snake.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpositionsnake__t}{positionsnake\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant une position dans la grille. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsnake__t}{snake\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un serpent. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structapple__t}{apple\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant une pomme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{snake_8h_a3b57363c10b62b64db916289b0437cfb}\label{snake_8h_a3b57363c10b62b64db916289b0437cfb} 
+\#define {\bfseries MAX\+\_\+\+SNAKE\+\_\+\+LENGTH}~1000
+\begin{DoxyCompactList}\small\item\em Longueur maximale d\textquotesingle{}un serpent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097ecea}{directionsnake\+\_\+t}} \{ \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa0b76fb863426c07c6c997a8d9523257b}{DIR\+\_\+\+UP}}
+, \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaab1bf68da897d09488069dd40e54f442d}{DIR\+\_\+\+DOWN}}
+, \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa1307dc42d06472935155dcbe283bc660}{DIR\+\_\+\+LEFT}}
+, \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa5dd21ef3d450f62c44082756cab8f6f8}{DIR\+\_\+\+RIGHT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Énumération des directions possibles pour un serpent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{snake_8h_af14013239c879d88333a5d13af3b9336}\label{snake_8h_af14013239c879d88333a5d13af3b9336} 
+void {\bfseries snake\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise le jeu Snake. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a9ad0c6652388f93a9690220ecca59e25}{snake\+\_\+update}} (void)
+\begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}état du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion du jeu Snake. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les définitions et structures nécessaires pour le jeu Snake, incluant les structures pour les serpents, les pommes et les directions. 
+
+\label{doc-enum-members}
+\Hypertarget{snake_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{snake_8h_a2c045dc46d8eda17f31ea3861097ecea}\index{snake.h@{snake.h}!directionsnake\_t@{directionsnake\_t}}
+\index{directionsnake\_t@{directionsnake\_t}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{directionsnake\_t}{directionsnake\_t}}
+{\footnotesize\ttfamily \label{snake_8h_a2c045dc46d8eda17f31ea3861097ecea} 
+enum \mbox{\hyperlink{snake_8h_a2c045dc46d8eda17f31ea3861097ecea}{directionsnake\+\_\+t}}}
+
+
+
+Énumération des directions possibles pour un serpent. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIR\_UP@{DIR\_UP}!snake.h@{snake.h}}\index{snake.h@{snake.h}!DIR\_UP@{DIR\_UP}}}\Hypertarget{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa0b76fb863426c07c6c997a8d9523257b}\label{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa0b76fb863426c07c6c997a8d9523257b} 
+DIR\+\_\+\+UP&Direction vers le haut \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIR\_DOWN@{DIR\_DOWN}!snake.h@{snake.h}}\index{snake.h@{snake.h}!DIR\_DOWN@{DIR\_DOWN}}}\Hypertarget{snake_8h_a2c045dc46d8eda17f31ea3861097eceaab1bf68da897d09488069dd40e54f442d}\label{snake_8h_a2c045dc46d8eda17f31ea3861097eceaab1bf68da897d09488069dd40e54f442d} 
+DIR\+\_\+\+DOWN&Direction vers le bas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIR\_LEFT@{DIR\_LEFT}!snake.h@{snake.h}}\index{snake.h@{snake.h}!DIR\_LEFT@{DIR\_LEFT}}}\Hypertarget{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa1307dc42d06472935155dcbe283bc660}\label{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa1307dc42d06472935155dcbe283bc660} 
+DIR\+\_\+\+LEFT&Direction vers la gauche \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIR\_RIGHT@{DIR\_RIGHT}!snake.h@{snake.h}}\index{snake.h@{snake.h}!DIR\_RIGHT@{DIR\_RIGHT}}}\Hypertarget{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa5dd21ef3d450f62c44082756cab8f6f8}\label{snake_8h_a2c045dc46d8eda17f31ea3861097eceaa5dd21ef3d450f62c44082756cab8f6f8} 
+DIR\+\_\+\+RIGHT&Direction vers la droite \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{snake_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{snake_8h_a9ad0c6652388f93a9690220ecca59e25}\index{snake.h@{snake.h}!snake\_update@{snake\_update}}
+\index{snake\_update@{snake\_update}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{snake\_update()}{snake\_update()}}
+{\footnotesize\ttfamily \label{snake_8h_a9ad0c6652388f93a9690220ecca59e25} 
+void snake\+\_\+update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Met à jour l\textquotesingle{}état du jeu. 
+
+Cette fonction gère la logique du jeu, les déplacements des serpents, les collisions et la génération des pommes 

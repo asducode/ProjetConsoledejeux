@@ -1,0 +1,92 @@
+\doxysection{displaybreak.\+h File Reference}
+\hypertarget{displaybreak_8h}{}\label{displaybreak_8h}\index{displaybreak.h@{displaybreak.h}}
+
+
+Gestion de l\textquotesingle{}affichage pour le jeu Break Bricks.  
+
+
+{\ttfamily \#include "{}breakbricks.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{displaybreak_8h_afd0c6797a610c84d289b9b78592262e0}\label{displaybreak_8h_afd0c6797a610c84d289b9b78592262e0} 
+void {\bfseries DISPLAYBREAK\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}affichage pour le jeu Break Bricks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaybreak_8h_a77fd388c91de0d1a08adc7ccc4c6aa12}{DISPLAYBREAK\+\_\+refresh\+\_\+ball}} (\mbox{\hyperlink{structballbreak__t}{ballbreak\+\_\+t}} \texorpdfstring{$\ast$}{*}ball)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage de la balle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaybreak_8h_aa83037b80c47c6c745434718e66f1fb0}{DISPLAYBREAK\+\_\+refresh\+\_\+life}} (int8\+\_\+t life)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage du nombre de vies restantes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaybreak_8h_abc8e011647b56e4c309c8efa649d9145}{DISPLAYBREAK\+\_\+refresh\+\_\+racket}} (\mbox{\hyperlink{structracketbreak__t}{racketbreak\+\_\+t}} \texorpdfstring{$\ast$}{*}racket)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage de la raquette. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaybreak_8h_a8b27a12c8d71eadea1793c64b3fe768f}{DISPLAYBREAK\+\_\+refresh\+\_\+grid}} (\mbox{\hyperlink{structgrid__t}{grid\+\_\+t}} \texorpdfstring{$\ast$}{*}grid)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage de la grille de briques. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}affichage pour le jeu Break Bricks. 
+
+Ce fichier contient les fonctions pour gérer l\textquotesingle{}affichage du jeu Break Bricks sur l\textquotesingle{}écran TFT, incluant l\textquotesingle{}affichage de la balle, de la raquette, de la grille de briques et des vies restantes. 
+
+\label{doc-func-members}
+\Hypertarget{displaybreak_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{displaybreak_8h_a77fd388c91de0d1a08adc7ccc4c6aa12}\index{displaybreak.h@{displaybreak.h}!DISPLAYBREAK\_refresh\_ball@{DISPLAYBREAK\_refresh\_ball}}
+\index{DISPLAYBREAK\_refresh\_ball@{DISPLAYBREAK\_refresh\_ball}!displaybreak.h@{displaybreak.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYBREAK\_refresh\_ball()}{DISPLAYBREAK\_refresh\_ball()}}
+{\footnotesize\ttfamily \label{displaybreak_8h_a77fd388c91de0d1a08adc7ccc4c6aa12} 
+void DISPLAYBREAK\+\_\+refresh\+\_\+ball (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structballbreak__t}{ballbreak\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ball}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage de la balle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & Pointeur vers la structure de la balle à afficher \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaybreak_8h_a8b27a12c8d71eadea1793c64b3fe768f}\index{displaybreak.h@{displaybreak.h}!DISPLAYBREAK\_refresh\_grid@{DISPLAYBREAK\_refresh\_grid}}
+\index{DISPLAYBREAK\_refresh\_grid@{DISPLAYBREAK\_refresh\_grid}!displaybreak.h@{displaybreak.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYBREAK\_refresh\_grid()}{DISPLAYBREAK\_refresh\_grid()}}
+{\footnotesize\ttfamily \label{displaybreak_8h_a8b27a12c8d71eadea1793c64b3fe768f} 
+void DISPLAYBREAK\+\_\+refresh\+\_\+grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrid__t}{grid\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{grid}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage de la grille de briques. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointeur vers la structure de la grille à afficher \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaybreak_8h_aa83037b80c47c6c745434718e66f1fb0}\index{displaybreak.h@{displaybreak.h}!DISPLAYBREAK\_refresh\_life@{DISPLAYBREAK\_refresh\_life}}
+\index{DISPLAYBREAK\_refresh\_life@{DISPLAYBREAK\_refresh\_life}!displaybreak.h@{displaybreak.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYBREAK\_refresh\_life()}{DISPLAYBREAK\_refresh\_life()}}
+{\footnotesize\ttfamily \label{displaybreak_8h_aa83037b80c47c6c745434718e66f1fb0} 
+void DISPLAYBREAK\+\_\+refresh\+\_\+life (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{life}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage du nombre de vies restantes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em life} & Nombre de vies restantes \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaybreak_8h_abc8e011647b56e4c309c8efa649d9145}\index{displaybreak.h@{displaybreak.h}!DISPLAYBREAK\_refresh\_racket@{DISPLAYBREAK\_refresh\_racket}}
+\index{DISPLAYBREAK\_refresh\_racket@{DISPLAYBREAK\_refresh\_racket}!displaybreak.h@{displaybreak.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYBREAK\_refresh\_racket()}{DISPLAYBREAK\_refresh\_racket()}}
+{\footnotesize\ttfamily \label{displaybreak_8h_abc8e011647b56e4c309c8efa649d9145} 
+void DISPLAYBREAK\+\_\+refresh\+\_\+racket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structracketbreak__t}{racketbreak\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{racket}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage de la raquette. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em racket} & Pointeur vers la structure de la raquette à afficher \\
+\hline
+\end{DoxyParams}

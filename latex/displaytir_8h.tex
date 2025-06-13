@@ -1,0 +1,118 @@
+\doxysection{displaytir.\+h File Reference}
+\hypertarget{displaytir_8h}{}\label{displaytir_8h}\index{displaytir.h@{displaytir.h}}
+
+
+Gestion de l\textquotesingle{}affichage pour le jeu de Tir.  
+
+
+{\ttfamily \#include "{}tir.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{displaytir_8h_ab762f3b872d3bc6013db84676ed33a72}\label{displaytir_8h_ab762f3b872d3bc6013db84676ed33a72} 
+void {\bfseries DISPLAY\+\_\+\+TIR\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}affichage pour le jeu de Tir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaytir_8h_addfe64d4666c13f6a4b28a329063ab7f}{DISPLAY\+\_\+\+TIR\+\_\+refresh\+\_\+players}} (\mbox{\hyperlink{structplayertir__t}{playertir\+\_\+t}} \texorpdfstring{$\ast$}{*}p1, \mbox{\hyperlink{structplayertir__t}{playertir\+\_\+t}} \texorpdfstring{$\ast$}{*}p2)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage des deux joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaytir_8h_ac2c0fe5fc216d25bc04dea7160e8da23}{DISPLAY\+\_\+\+TIR\+\_\+refresh\+\_\+bullets}} (\mbox{\hyperlink{structbullet__t}{bullet\+\_\+t}} bullets\+\_\+p1\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structbullet__t}{bullet\+\_\+t}} bullets\+\_\+p2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage des projectiles des deux joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaytir_8h_aaa6ebd39824240e6fa121447c5687885}{DISPLAY\+\_\+\+TIR\+\_\+draw\+\_\+health}} (uint8\+\_\+t health\+\_\+p1, uint8\+\_\+t health\+\_\+p2)
+\begin{DoxyCompactList}\small\item\em Affiche les points de vie des deux joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaytir_8h_ac03a44e1770d8f0a71bbc07615006192}{DISPLAY\+\_\+\+TIR\+\_\+show\+\_\+winner}} (uint8\+\_\+t winner)
+\begin{DoxyCompactList}\small\item\em Affiche le gagnant de la partie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displaytir_8h_a886b2bbc8a6e76d61629d993dd219b9a}{DISPLAY\+\_\+\+TIR\+\_\+erase\+\_\+bullet}} (\mbox{\hyperlink{structbullet__t}{bullet\+\_\+t}} \texorpdfstring{$\ast$}{*}bullet)
+\begin{DoxyCompactList}\small\item\em Efface un projectile de l\textquotesingle{}écran. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}affichage pour le jeu de Tir. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les fonctions pour gérer l\textquotesingle{}affichage du jeu de Tir sur l\textquotesingle{}écran TFT, incluant l\textquotesingle{}affichage des joueurs, des projectiles, des points de vie et du gagnant. 
+
+\label{doc-func-members}
+\Hypertarget{displaytir_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{displaytir_8h_aaa6ebd39824240e6fa121447c5687885}\index{displaytir.h@{displaytir.h}!DISPLAY\_TIR\_draw\_health@{DISPLAY\_TIR\_draw\_health}}
+\index{DISPLAY\_TIR\_draw\_health@{DISPLAY\_TIR\_draw\_health}!displaytir.h@{displaytir.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_TIR\_draw\_health()}{DISPLAY\_TIR\_draw\_health()}}
+{\footnotesize\ttfamily \label{displaytir_8h_aaa6ebd39824240e6fa121447c5687885} 
+void DISPLAY\+\_\+\+TIR\+\_\+draw\+\_\+health (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{health\+\_\+p1}{, }\item[{uint8\+\_\+t}]{health\+\_\+p2}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les points de vie des deux joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em health\+\_\+p1} & Points de vie du joueur 1 \\
+\hline
+{\em health\+\_\+p2} & Points de vie du joueur 2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaytir_8h_a886b2bbc8a6e76d61629d993dd219b9a}\index{displaytir.h@{displaytir.h}!DISPLAY\_TIR\_erase\_bullet@{DISPLAY\_TIR\_erase\_bullet}}
+\index{DISPLAY\_TIR\_erase\_bullet@{DISPLAY\_TIR\_erase\_bullet}!displaytir.h@{displaytir.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_TIR\_erase\_bullet()}{DISPLAY\_TIR\_erase\_bullet()}}
+{\footnotesize\ttfamily \label{displaytir_8h_a886b2bbc8a6e76d61629d993dd219b9a} 
+void DISPLAY\+\_\+\+TIR\+\_\+erase\+\_\+bullet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbullet__t}{bullet\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{bullet}{}\end{DoxyParamCaption})}
+
+
+
+Efface un projectile de l\textquotesingle{}écran. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bullet} & Pointeur vers la structure du projectile à effacer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaytir_8h_ac2c0fe5fc216d25bc04dea7160e8da23}\index{displaytir.h@{displaytir.h}!DISPLAY\_TIR\_refresh\_bullets@{DISPLAY\_TIR\_refresh\_bullets}}
+\index{DISPLAY\_TIR\_refresh\_bullets@{DISPLAY\_TIR\_refresh\_bullets}!displaytir.h@{displaytir.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_TIR\_refresh\_bullets()}{DISPLAY\_TIR\_refresh\_bullets()}}
+{\footnotesize\ttfamily \label{displaytir_8h_ac2c0fe5fc216d25bc04dea7160e8da23} 
+void DISPLAY\+\_\+\+TIR\+\_\+refresh\+\_\+bullets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbullet__t}{bullet\+\_\+t}}}]{bullets\+\_\+p1}{\mbox{[}$\,$\mbox{]}, }\item[{\mbox{\hyperlink{structbullet__t}{bullet\+\_\+t}}}]{bullets\+\_\+p2}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage des projectiles des deux joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bullets\+\_\+p1} & Tableau des projectiles du joueur 1 \\
+\hline
+{\em bullets\+\_\+p2} & Tableau des projectiles du joueur 2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaytir_8h_addfe64d4666c13f6a4b28a329063ab7f}\index{displaytir.h@{displaytir.h}!DISPLAY\_TIR\_refresh\_players@{DISPLAY\_TIR\_refresh\_players}}
+\index{DISPLAY\_TIR\_refresh\_players@{DISPLAY\_TIR\_refresh\_players}!displaytir.h@{displaytir.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_TIR\_refresh\_players()}{DISPLAY\_TIR\_refresh\_players()}}
+{\footnotesize\ttfamily \label{displaytir_8h_addfe64d4666c13f6a4b28a329063ab7f} 
+void DISPLAY\+\_\+\+TIR\+\_\+refresh\+\_\+players (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayertir__t}{playertir\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p1}{, }\item[{\mbox{\hyperlink{structplayertir__t}{playertir\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p2}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage des deux joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & Pointeur vers la structure du joueur 1 \\
+\hline
+{\em p2} & Pointeur vers la structure du joueur 2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displaytir_8h_ac03a44e1770d8f0a71bbc07615006192}\index{displaytir.h@{displaytir.h}!DISPLAY\_TIR\_show\_winner@{DISPLAY\_TIR\_show\_winner}}
+\index{DISPLAY\_TIR\_show\_winner@{DISPLAY\_TIR\_show\_winner}!displaytir.h@{displaytir.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_TIR\_show\_winner()}{DISPLAY\_TIR\_show\_winner()}}
+{\footnotesize\ttfamily \label{displaytir_8h_ac03a44e1770d8f0a71bbc07615006192} 
+void DISPLAY\+\_\+\+TIR\+\_\+show\+\_\+winner (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{winner}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le gagnant de la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winner} & Numéro du joueur gagnant (1 ou 2) \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,103 @@
+\doxysection{displayfoot.\+h File Reference}
+\hypertarget{displayfoot_8h}{}\label{displayfoot_8h}\index{displayfoot.h@{displayfoot.h}}
+
+
+Gestion de l\textquotesingle{}affichage pour le jeu de Football.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}football.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{displayfoot_8h_a55068bdf529f2ea32247b517f32a414f}\label{displayfoot_8h_a55068bdf529f2ea32247b517f32a414f} 
+void {\bfseries DISPLAYFOOT\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}affichage pour le jeu de Football. \end{DoxyCompactList}\item 
+\Hypertarget{displayfoot_8h_a1c39299b22739bb3d3f0c59d966ee0ec}\label{displayfoot_8h_a1c39299b22739bb3d3f0c59d966ee0ec} 
+void {\bfseries DISPLAYFOOT\+\_\+show\+\_\+field} (void)
+\begin{DoxyCompactList}\small\item\em Affiche le terrain de football. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displayfoot_8h_a23b29b30513017c28cb33bffa554325a}{DISPLAYFOOT\+\_\+draw\+\_\+scores}} (uint8\+\_\+t score\+\_\+p1, uint8\+\_\+t score\+\_\+p2)
+\begin{DoxyCompactList}\small\item\em Affiche les scores des deux joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displayfoot_8h_ae9e8fc9de14fdbd1cbcafa832f468809}{DISPLAYFOOT\+\_\+refresh\+\_\+ball}} (\mbox{\hyperlink{structballfoot__t}{ballfoot\+\_\+t}} \texorpdfstring{$\ast$}{*}ball)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage de la balle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displayfoot_8h_a1b1d4f6cb627a4978885a5c58aa0615e}{DISPLAYFOOT\+\_\+refresh\+\_\+players}} (\mbox{\hyperlink{structplayerfoot__t}{playerfoot\+\_\+t}} \texorpdfstring{$\ast$}{*}p1, \mbox{\hyperlink{structplayerfoot__t}{playerfoot\+\_\+t}} \texorpdfstring{$\ast$}{*}p2)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage des deux joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{displayfoot_8h_a1e44db71b86f4f3f7b53ea9910bee135}{DISPLAYFOOT\+\_\+show\+\_\+winner}} (uint8\+\_\+t winner)
+\begin{DoxyCompactList}\small\item\em Affiche le gagnant de la partie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}affichage pour le jeu de Football. 
+
+\begin{DoxyAuthor}{Author}
+MOUSTAPHA et ATIGOSSOU
+\end{DoxyAuthor}
+Ce fichier contient les fonctions pour gérer l\textquotesingle{}affichage du jeu de Football sur l\textquotesingle{}écran TFT, incluant l\textquotesingle{}affichage du terrain, de la balle, des joueurs, des scores et du gagnant. 
+
+\label{doc-func-members}
+\Hypertarget{displayfoot_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{displayfoot_8h_a23b29b30513017c28cb33bffa554325a}\index{displayfoot.h@{displayfoot.h}!DISPLAYFOOT\_draw\_scores@{DISPLAYFOOT\_draw\_scores}}
+\index{DISPLAYFOOT\_draw\_scores@{DISPLAYFOOT\_draw\_scores}!displayfoot.h@{displayfoot.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYFOOT\_draw\_scores()}{DISPLAYFOOT\_draw\_scores()}}
+{\footnotesize\ttfamily \label{displayfoot_8h_a23b29b30513017c28cb33bffa554325a} 
+void DISPLAYFOOT\+\_\+draw\+\_\+scores (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{score\+\_\+p1}{, }\item[{uint8\+\_\+t}]{score\+\_\+p2}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les scores des deux joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score\+\_\+p1} & Score du joueur 1 \\
+\hline
+{\em score\+\_\+p2} & Score du joueur 2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displayfoot_8h_ae9e8fc9de14fdbd1cbcafa832f468809}\index{displayfoot.h@{displayfoot.h}!DISPLAYFOOT\_refresh\_ball@{DISPLAYFOOT\_refresh\_ball}}
+\index{DISPLAYFOOT\_refresh\_ball@{DISPLAYFOOT\_refresh\_ball}!displayfoot.h@{displayfoot.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYFOOT\_refresh\_ball()}{DISPLAYFOOT\_refresh\_ball()}}
+{\footnotesize\ttfamily \label{displayfoot_8h_ae9e8fc9de14fdbd1cbcafa832f468809} 
+void DISPLAYFOOT\+\_\+refresh\+\_\+ball (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structballfoot__t}{ballfoot\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ball}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage de la balle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & Pointeur vers la structure de la balle à afficher \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displayfoot_8h_a1b1d4f6cb627a4978885a5c58aa0615e}\index{displayfoot.h@{displayfoot.h}!DISPLAYFOOT\_refresh\_players@{DISPLAYFOOT\_refresh\_players}}
+\index{DISPLAYFOOT\_refresh\_players@{DISPLAYFOOT\_refresh\_players}!displayfoot.h@{displayfoot.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYFOOT\_refresh\_players()}{DISPLAYFOOT\_refresh\_players()}}
+{\footnotesize\ttfamily \label{displayfoot_8h_a1b1d4f6cb627a4978885a5c58aa0615e} 
+void DISPLAYFOOT\+\_\+refresh\+\_\+players (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayerfoot__t}{playerfoot\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p1}{, }\item[{\mbox{\hyperlink{structplayerfoot__t}{playerfoot\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p2}{}\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage des deux joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & Pointeur vers la structure du joueur 1 \\
+\hline
+{\em p2} & Pointeur vers la structure du joueur 2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{displayfoot_8h_a1e44db71b86f4f3f7b53ea9910bee135}\index{displayfoot.h@{displayfoot.h}!DISPLAYFOOT\_show\_winner@{DISPLAYFOOT\_show\_winner}}
+\index{DISPLAYFOOT\_show\_winner@{DISPLAYFOOT\_show\_winner}!displayfoot.h@{displayfoot.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAYFOOT\_show\_winner()}{DISPLAYFOOT\_show\_winner()}}
+{\footnotesize\ttfamily \label{displayfoot_8h_a1e44db71b86f4f3f7b53ea9910bee135} 
+void DISPLAYFOOT\+\_\+show\+\_\+winner (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{winner}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le gagnant de la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winner} & Numéro du joueur gagnant (1 ou 2) \\
+\hline
+\end{DoxyParams}

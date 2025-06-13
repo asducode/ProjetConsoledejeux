@@ -1,0 +1,54 @@
+\doxysection{tir.\+h}
+\hypertarget{tir_8h_source}{}\label{tir_8h_source}\mbox{\hyperlink{tir_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ TIR\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ TIR\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ SCREEN\_WIDTH\ \ \ 320}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ SCREEN\_HEIGHT\ \ 240}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ PLAYER\_WIDTH\_TIR\ \ \ 15}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ PLAYER\_HEIGHT\_TIR\ \ 25}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ BULLET\_SPEED\ \ \ 8}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ PLAYER\_SPEED\ \ \ 5}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ MAX\_BULLETS\ \ \ \ 5}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86bacfd68378455a8873a684c4cf48cf81bf}{TIR\_GAME\_WAIT\_START}},\ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86bab589b570b03def5b8ce0aecc348b936d}{TIR\_GAME\_RUNNING}},\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86ba69ec5a3b833fd0672583dfda4aba6489}{TIR\_GAME\_OVER}}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \}\ \mbox{\hyperlink{tir_8h_af161e86a1d12e253a507cd92746ee86b}{gametir\_state\_t}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00062\ \ \ \ \ int16\_t\ x,\ \mbox{\hyperlink{structplayertir__t_abf088d7785046c4f5b3b13b22c911bb9}{y}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ int16\_t\ prev\_x,\ \mbox{\hyperlink{structplayertir__t_a191c8adeef4645126bd66376db99dd77}{prev\_y}};}
+\DoxyCodeLine{00064\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structplayertir__t_a5e043dc8944f480bddd4d37d101b953f}{health}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \}\ \mbox{\hyperlink{structplayertir__t}{playertir\_t}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00071\ \ \ \ \ int16\_t\ x,\ \mbox{\hyperlink{structbullet__t_a50bbd427a6a2bfe4e671cd71b285eb76}{y}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ int16\_t\ prev\_x,\ \mbox{\hyperlink{structbullet__t_ab952adcd278f2b85e9251fbf94cf131a}{prev\_y}};}
+\DoxyCodeLine{00073\ \ \ \ \ int16\_t\ \mbox{\hyperlink{structbullet__t_ae0912c9f13281d9b63f63e6c278f10f1}{speed\_x}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structbullet__t_a99dd2ccb5ad5e7237bb596ff0734a7c1}{active}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \}\ \mbox{\hyperlink{structbullet__t}{bullet\_t}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tir_8h_ac006e6762b934b3410cf50f7de539bde}{TIR\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tir_8h_af77387100a4a98a330a9326dc8a6b1c3}{TIR\_process\_main}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tir_8h_ab8f6acab9fac47381d8a0f2baafd76d9}{TIR\_shoot}}(\mbox{\hyperlink{structplayertir__t}{playertir\_t}}\ *player);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tir_8h_a892df9a36a9d0e7240a99fee2cd6515e}{TIR\_check\_collisions}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ TIR\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
