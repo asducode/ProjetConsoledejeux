@@ -47,8 +47,8 @@ void FOOTBALL_process_main(void) {
 }
 
 static void FOOTBALL_update_positions(void) {
-    bool j1u = 0, j1d = 0, j1l = 0, j1r = 0;
-    bool j2h = 0, j2b = 0, j2g = 0, j2e = 0;
+    bool j1u = 0, j1d = 0, j1l = 0, j1r = 0 , j1reset =0;
+    bool j2h = 0, j2b = 0, j2g = 0, j2e = 0;  j2reset = 0;
 
     // Lecture des commandes UART
     if (BSP_UART_data_ready(UART1_ID)) {
